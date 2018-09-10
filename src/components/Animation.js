@@ -1,5 +1,5 @@
-import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import React from 'react'
+import styled, { keyframes } from 'styled-components'
 
 const jelly = keyframes`
   0% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
@@ -28,11 +28,11 @@ const jelly = keyframes`
   85.49% { transform: matrix3d(1.999, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
   90.69% { transform: matrix3d(1.999, 0, 0, 0, 0, 1.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
   100% { transform: matrix3d(2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-`;
+`
 
 export const Jelly = styled.div`
-     {
-        -webkit-animation: ${jelly} 1000ms linear both;
-        animation: ${jelly} 1000ms linear both;
-    }
-`;
+   {
+    -webkit-animation: ${jelly} 1000ms linear both;
+    animation: ${jelly} 1000ms linear both;
+  }
+`
