@@ -1,27 +1,28 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import Link from 'gatsby-link'
+import React from 'react';
+import { Link } from 'gatsby';
 
-const FlexHeader = styled.header`
-  display: flex;
-  padding: 1rem;
-  color: white;
-`
-
-const NavItem = styled.li`
-  font-family: 'Sarala';
-  text-transform: uppercase;
-  padding: 0 1rem;
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
-  color: black;
-`
+const NavItem = ({ children }) => (
+  <li
+    style={{
+      fontFamily: 'Sarala',
+      textTransform: 'uppercase',
+      padding: '0 1rem',
+      textDecoration: 'none',
+      color: 'black',
+    }}
+  >
+    {children}
+  </li>
+);
 
 const Header = () => (
-  <FlexHeader>
+  <header
+    style={{
+      display: 'flex',
+      padding: '1rem',
+      color: 'white',
+    }}
+  >
     <nav>
       <ul className="flex list-reset">
         <NavItem>
@@ -35,7 +36,7 @@ const Header = () => (
         </NavItem>
       </ul>
     </nav>
-  </FlexHeader>
-)
+  </header>
+);
 
-export default Header
+export default Header;

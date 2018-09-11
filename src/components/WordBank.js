@@ -1,5 +1,4 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
 
 const WordBank = ({ words, ...props }) => (
   <p {...props}>
@@ -9,6 +8,6 @@ const WordBank = ({ words, ...props }) => (
       </span>
     ))}
   </p>
-)
+);
 
-export default WordBank
+export default WordBank;

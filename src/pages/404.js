@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { Layout } from '../components/Layout';
 
 const NotFoundPage = () => (
-  <div>
+  <Layout>
     <h1>404</h1>
     <p>Well this doesn't seem right.</p>
-  </div>
-)
+  </Layout>
+);
 
-export default NotFoundPage
+export default NotFoundPage;

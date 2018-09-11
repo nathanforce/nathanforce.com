@@ -1,7 +1,12 @@
-import React from 'react'
-import S from 'styled-components'
+import React from 'react';
 
-export const Subtext = S.span`
-  font-size: 12px;
-  color: #aaa;
-`
+export const Subtext = ({ style, ...props }) => (
+  <span
+    style={{
+      fontSize: 12,
+      color: '#aaa',
+      ...style,
+    }}
+    {...props}
+  />
+);

@@ -1,13 +1,15 @@
-import React from 'react'
-import Typewriter from '../components/Typewriter'
+import React from 'react';
+import { Layout } from '../components/Layout';
 
 const Blog = () => (
-  <div className="pt4">
-    <h1 className="center mt2">Blog</h1>
-    <div className="max-width-2 mx-auto center">
-      <Typewriter>Hmnnnn. Nothing here yet?</Typewriter>
+  <Layout>
+    <div className="pt4">
+      <h1 className="center mt2">Blog</h1>
+      <div className="max-width-2 mx-auto center">
+        <span>Hmnnnn. Nothing here yet?</span>
+      </div>
     </div>
-  </div>
-)
+  </Layout>
+);
 
-export default Blog
+export default Blog;

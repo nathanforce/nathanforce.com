@@ -1,19 +1,23 @@
-import React from 'react'
-import { adjustFontSizeTo } from '../utils/typography'
-import styled from 'styled-components'
-import { Subtext } from '../components/Text'
-import GradientBackground from '../components/GradientBackground'
-import Link from 'gatsby-link'
+import React from 'react';
+import { Subtext } from '../components/Text';
+import { Layout } from '../components/Layout';
+import { graphql, Link } from 'gatsby';
 
-const Card = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-`
+const Card = ({ style, ...props }) => (
+  <div
+    style={{
+      display: 'flex',
+      flexWrap: 'wrap',
+      flexDirection: 'column',
+      boxShadow: '0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)',
+      ...style,
+    }}
+    {...props}
+  />
+);
 
-const Projects = ({ data }) =>
-  console.log(data) || (
+const Projects = ({ data }) => (
+  <Layout>
     <div className="md-px4 px2 pt0">
       <h1 className="center mt2">Projects</h1>
       <div className="max-width-3 mx-auto center">
@@ -28,7 +32,7 @@ const Projects = ({ data }) =>
             style={{ textDecoration: `none`, color: `inherit` }}
           >
             <Card className="px2 pt2 pb1 my3" key={node.id}>
-              <GradientBackground
+              <div
                 className="flex items-center justify-center"
                 style={{ height: '200px' }}
               >
@@ -41,7 +45,7 @@ const Projects = ({ data }) =>
                 >
                   {node.frontmatter.title}
                 </h2>
-              </GradientBackground>
+              </div>
               <p className="py2" style={{ color: '#666', fontSize: '.875rem' }}>
                 {node.excerpt}
               </p>
@@ -53,9 +57,10 @@ const Projects = ({ data }) =>
         ))}
       </div>
     </div>
-  )
+  </Layout>
+);
 
-export default Projects
+export default Projects;
 
 export const query = graphql`
   query IndexQuery {
@@ -77,4 +82,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
