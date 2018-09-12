@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Social = () => (
-  <div className="flex justify-center">
-    <div className="mx2 p1">
+  <div className="flex">
+    <div className="mr2 p1">
       <a href="https://github.com/nathanforce" title="Nathan Force's GitHub">
         <img
           style={{ margin: 0 }}
@@ -13,7 +13,7 @@ const Social = () => (
         />
       </a>
     </div>
-    <div className="mx2 p1">
+    <div className="ml2 p1">
       <a
         href="https://www.instagram.com/nathanforce"
         title="Nathan Force's Instagram"

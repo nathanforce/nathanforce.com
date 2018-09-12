@@ -1,14 +1,12 @@
 import React from 'react';
 import { Layout } from '../components/Layout';
+import { Heading } from '../components/Heading';
+import { Text } from '../components/Text';
 
 const Blog = () => (
   <Layout>
-    <div className="pt4">
-      <h1 className="center mt2">Blog</h1>
-      <div className="max-width-2 mx-auto center">
-        <span>Hmnnnn. Nothing here yet?</span>
-      </div>
-    </div>
+    <Heading>Blog</Heading>
+    <Text>Hmnnnn. Nothing here yet?</Text>
   </Layout>
 );
 

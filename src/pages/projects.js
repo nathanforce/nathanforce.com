@@ -1,7 +1,10 @@
 import React from 'react';
-import { Subtext } from '../components/Text';
+import { Text } from '../components/Text';
 import { Layout } from '../components/Layout';
 import { graphql, Link } from 'gatsby';
+import { Heading } from '../components/Heading';
+import { theme } from '../theme';
+import RandomGradient from '../components/RandomGradient';
 
 const Card = ({ style, ...props }) => (
   <div
@@ -16,42 +19,84 @@ const Card = ({ style, ...props }) => (
   />
 );
 
+const GradientBackground = ({ className, ...props }) => {
+  return (
+    <RandomGradient
+      render={({ left, right }) => (
+        <div
+          css={[
+            {
+              background: `linear-gradient(
+                to right,
+                ${left},
+                ${right}
+              )`,
+            },
+            className,
+          ]}
+          {...props}
+        />
+      )}
+    />
+  );
+};
+
 const Projects = ({ data }) => (
   <Layout>
-    <div className="md-px4 px2 pt0">
-      <h1 className="center mt2">Projects</h1>
-      <div className="max-width-3 mx-auto center">
+    <div css={{ maxWidth: '75%', margin: '0 auto' }}>
+      <Heading>Projects</Heading>
+      <Text>
         Below are some of the projects I've worked on in the past or actively
         work on now. Unfortunately, most of my current work is closed off behind
         the Corporate Veil of Secrecy™.
-      </div>
-      <div className="max-width-3 mx-auto">
+      </Text>
+      <div>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <Link
             to={node.fields.slug}
             style={{ textDecoration: `none`, color: `inherit` }}
           >
             <Card className="px2 pt2 pb1 my3" key={node.id}>
-              <div
-                className="flex items-center justify-center"
-                style={{ height: '200px' }}
+              <GradientBackground
+                css={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  height: '200px',
+                }}
               >
-                <h2
-                  className="m0 center h4 sm-h2"
+                <Heading
                   style={{
                     color: '#666',
                     mixBlendMode: 'color-burn',
+                    textTransform: 'uppercase',
+                    fontSize: '2rem',
                   }}
                 >
                   {node.frontmatter.title}
-                </h2>
+                </Heading>
+              </GradientBackground>
+              <div css={{ marginTop: '2rem' }}>
+                <Text
+                  style={{ color: theme.color.darkGray, fontSize: '.875rem' }}
+                >
+                  {node.excerpt}
+                </Text>
               </div>
-              <p className="py2" style={{ color: '#666', fontSize: '.875rem' }}>
-                {node.excerpt}
-              </p>
-              <Subtext className="self-start" style={{ marginTop: 'auto' }}>
-                {node.frontmatter.tags}
-              </Subtext>
+              <div css={{ marginTop: '2rem' }}>
+                <Text
+                  className="self-start"
+                  style={{
+                    marginTop: 'auto',
+                    textTransform: 'uppercase',
+                    fontWeight: 'bold',
+                    color: theme.color.black,
+                    fontSize: '.675rem',
+                  }}
+                >
+                  {node.frontmatter.tags}
+                </Text>
+              </div>
             </Card>
           </Link>
         ))}
