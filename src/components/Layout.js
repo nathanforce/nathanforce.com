@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import Header from './Header';
 
 import '../global.css';
+import { theme } from '../theme';
 
 export const Layout = ({ children }) => (
   <div style={{ minHeight: '100vh' }}>
@@ -21,7 +22,9 @@ export const Layout = ({ children }) => (
       css={{
         padding: '1rem',
         margin: '4rem auto',
-        width: '65%',
+        [theme.media.medium]: {
+          width: '65%',
+        },
       }}
     >
       {children}

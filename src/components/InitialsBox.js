@@ -1,4 +1,5 @@
 import React from 'react';
+import { theme } from '../theme';
 
 export const InitialsBox = ({ children, image }) => (
   <div
@@ -21,9 +22,19 @@ export const InitialsBox = ({ children, image }) => (
           letterSpacing: 'inherit',
           margin: 0,
           position: 'relative',
-          width: '15vw',
-          height: '15vw',
           overflow: 'hidden',
+          width: '80vw',
+          height: '80vw',
+          maxWidth: 200,
+          maxHeight: 200,
+          [theme.media.medium]: {
+            maxWidth: 'none',
+            maxHeight: 'none',
+            width: '15vw',
+            height: '15vw',
+            minWidth: 200,
+            minHeight: 200,
+          },
         }}
       >
         <div

@@ -43,7 +43,14 @@ const GradientBackground = ({ className, ...props }) => {
 
 const Projects = ({ data }) => (
   <Layout>
-    <div css={{ maxWidth: '75%', margin: '0 auto' }}>
+    <div
+      css={{
+        [theme.media.medium]: {
+          maxWidth: '75%',
+        },
+        margin: '0 auto',
+      }}
+    >
       <Heading>Projects</Heading>
       <Text>
         Below are some of the projects I've worked on in the past or actively
@@ -63,14 +70,19 @@ const Projects = ({ data }) => (
                   alignItems: 'center',
                   justifyContent: 'center',
                   height: '200px',
+                  padding: '2rem',
                 }}
               >
                 <Heading
-                  style={{
+                  css={{
                     color: '#666',
                     mixBlendMode: 'color-burn',
                     textTransform: 'uppercase',
-                    fontSize: '2rem',
+                    fontSize: '1rem',
+                    display: 'inline-block',
+                    [theme.media.medium]: {
+                      fontSize: '2rem',
+                    },
                   }}
                 >
                   {node.frontmatter.title}
@@ -78,7 +90,10 @@ const Projects = ({ data }) => (
               </GradientBackground>
               <div css={{ marginTop: '2rem' }}>
                 <Text
-                  style={{ color: theme.color.darkGray, fontSize: '.875rem' }}
+                  style={{
+                    color: theme.color.darkGray,
+                    fontSize: '.875rem',
+                  }}
                 >
                   {node.excerpt}
                 </Text>
