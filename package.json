@@ -5,7 +5,7 @@
   "author": "Nathan Force <nathan.a.force@gmail.com>",
   "dependencies": {
     "blob-util": "^2.0.2",
-    "gatsby": "^2.0.0-rc.15",
+    "gatsby": "^2.24.34",
     "gatsby-image": "^1.0.55",
     "gatsby-plugin-glamor": "^2.0.0-rc.1",
     "gatsby-plugin-react-helmet": "^3.0.0-rc.1",
@@ -18,8 +18,8 @@
     "javascript-yellow": "^1.0.4",
     "lodash": "^4.17.4",
     "polished": "^2.0.3",
-    "react": "^16.5.0",
-    "react-dom": "^16.5.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-dropzone": "^5.1.0",
     "react-helmet": "^5.2.0",
     "react-transition-group": "^2.2.1"

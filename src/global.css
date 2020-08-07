@@ -1,10 +1,29 @@
-html, body {
-    box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
+html,
+body {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
 }
 
+.poem span {
+  display: block;
+  margin-top: 1rem;
+}
+
+.poem {
+  width: 30ch;
+  text-align: left;
+  margin-top: 3rem;
+  font-size: 2rem;
+  color: #72847d;
+  font-family: 'Special Elite', cursive;
+}
+
+#bday {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
