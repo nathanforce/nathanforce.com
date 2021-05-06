@@ -16,7 +16,7 @@
     "gatsby-transformer-sharp": "^2.1.1-rc.3",
     "glamor": "^2.20.40",
     "javascript-yellow": "^1.0.4",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.21",
     "polished": "^2.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
